@@ -1,0 +1,159 @@
+body {
+    background-image: url("image.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .search-form {
+    border-radius: 20px;
+    padding: 2rem;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .content {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.student {
+    width: 50%;
+    margin: 0 auto;
+    flex: 20%;
+    padding: 10px;
+    margin: 5px;
+    inline-size: 100%;
+}
+
+.name a {
+    color: #00a36f;
+    text-decoration: none;
+}
+  
+  .search-input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 15px;
+    padding-left: 15px;
+    border: 2px solid #007bff;
+  }
+  
+  .search-button {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #0069d9;
+  }
+
+  .bg-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-slideshow div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    animation: fade 24s infinite;
+    opacity: 0;
+}
+
+.bg-slideshow div:nth-child(1) {
+    background-image: url("backgrounds/1.jpg");
+    animation-delay: 0s;
+    opacity: 1;
+}
+
+.bg-slideshow div:nth-child(2) {
+    background-image: url("backgrounds/2.jpg");
+    animation-delay: 6s;
+}
+
+.bg-slideshow div:nth-child(3) {
+    background-image: url("backgrounds/3.jpg");
+    animation-delay: 12s;
+}
+
+.bg-slideshow div:nth-child(4) {
+    background-image: url("backgrounds/4.jpg");
+    animation-delay: 18s;
+}
+
+/* @keyframes fade {
+    0% {opacity: 0;}
+    8.333%{opacity:1}
+    33.333%{opacity:1}
+    41.666% {opacity: 0;}
+} */
+
+@keyframes fade {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    8.333% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    33.333% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    41.666% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    66.66%{
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+
+html, body {
+    overflow: hidden;
+}
